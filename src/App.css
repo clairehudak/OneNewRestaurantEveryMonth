@@ -1,5 +1,46 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100vh;
+  width: 100vw;
+}
+.sidebar {
+  width: 25%;
+  font-size: 15px;
+  padding: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar, #infoButton {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #search {
+    font-size: 8px;
+  }
+}
+
+#search {
+  width: 95%;
+  height: 35px;
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+}
+.restaurantList{
+  padding: 5px;
+  margin-top: 1px;
+}
+.restaurants {
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding:1px;
+  border: 1px solid;
+  align-content: center;
+  box-shadow: 1px 3px 5px #888888;
 }
 
 .App-logo {
