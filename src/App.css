@@ -11,6 +11,26 @@
   padding: 3px;
 }
 
+.mapError {
+  height: 100%;
+  width: 75%;
+  text-align: center;
+}
+
+/*****************************************************/
+ /*from https://www.w3.org/WAI/tutorials/forms/labels/*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*****************************************************/
+
 @media screen and (max-width: 600px) {
   .sidebar, #infoButton {
     font-size: 10px;

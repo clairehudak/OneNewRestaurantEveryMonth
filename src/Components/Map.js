@@ -37,15 +37,33 @@ const MyMapComponent = withScriptjs(
 ));
 
 class MyMap extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {hasError: false};
+  }
+
+  componentDidCatch(error, info) {
+    this.setState({hasError: true});
+  }
   render() {
+    if (this.state.hasError){
+      return (
+        <div className = "mapError">
+          <React.Fragment>
+            <p><strong> Sorry, something went wrong, and the map did not load. </strong></p>
+          </React.Fragment>
+        </div>
+      )
+    }
     return (
-      <MyMapComponent
-        {...this.props}
-        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCg0K49xId3q_GwOJU6X8uWfolmlpeuqbw"
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `120%`, width: `75%` }} />}
-        mapElement={<div style={{ height: `120%` }} />}
-      />
+
+        <MyMapComponent
+          {...this.props}
+          googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCg0K49xId3q_GwOJU6X8uWfolmlpeuqbw"
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `120%`, width: `75%` }} />}
+          mapElement={<div style={{ height: `120%` }} />}
+        />
     )
   }
 }

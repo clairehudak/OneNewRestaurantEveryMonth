@@ -216,6 +216,11 @@ class App extends Component {
         });
         this.setState({venues:newVenues, markers: newMarkers});
       })
+      // Console log if there is an error accessing the venues
+      // The user also will see an error in the sidebar. See RestaurantList.js
+      .catch(error => {
+        console.log("Oops. Failed to access a restaurant. " + error);
+      })
     } // end of for loop
 
     //**********************************************************
@@ -244,7 +249,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div role = "main" className="App">
         <Sidebar
           {...this.state}
           restaurantClicked = {this.restaurantClicked}

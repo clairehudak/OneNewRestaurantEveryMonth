@@ -56,7 +56,9 @@ class Sidebar extends Component {
       <div className = "sidebar">
         <h3> One New Restaurant Every Month </h3>
         <h4> City: Dallas/North Dallas </h4>
-        <p><button id = {"infoButton"} onClick={() => this.props.infoClicked()}> More Info </button> </p>
+        <label htmlFor="search" className = "visuallyhidden"> More information button:</label>
+        <p><button type = {"button"} id = {"infoButton"} onClick={() => this.props.infoClicked()}> More Info </button> </p>
+        <label htmlFor="search" className = "visuallyhidden"> Search Restaurants:</label>
         <input
           type = {"search"}
           id = {"search"}
