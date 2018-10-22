@@ -22,7 +22,7 @@ import Sidebar from "./Components/Sidebar";
 
 //*************************************************************************
 // Array of search parameters to give to the FoursquareApi.search function.
-// These parameters will return the correct ONREM restaurant
+// These parameters will return the correct ONREM restaurant.
 //*************************************************************************
 const venueSearchParams = [
   {
