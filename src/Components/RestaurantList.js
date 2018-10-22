@@ -12,9 +12,9 @@ class RestaurantList extends Component {
             <Restaurants key={id} {...restaurant}
             restaurantClicked = {this.props.restaurantClicked}/>
           ))}
-          {/*Error handling. If the venue list is empty, let the user know.*/}
-          {this.props.venues.length === 0 &&
-            <span> Fetching the restaurant list&#8230; </span>
+          {/*Error handling.*/}
+          {this.props.apiError === true &&
+            <span> Sorry, something went wrong. </span>
           }
       </ol>
     )

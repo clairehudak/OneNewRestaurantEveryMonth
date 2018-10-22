@@ -67,7 +67,7 @@ class Sidebar extends Component {
           onClick = {this.endAnimation}
         />
         <
-          RestaurantList {...this.props.venues}
+          RestaurantList {...this.props}
           venues = {this.handleFilterRestaurants()}
           restaurantClicked = {this.props.restaurantClicked}
         />

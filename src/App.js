@@ -94,6 +94,7 @@ class App extends Component {
       venues:[],
       markers:[],
       zoom: 11,
+      apiError: false,
       // updateSuperState takes in an ojbect and sets the state of that ojvect
       updateSuperState: obj => {
         this.setState(obj);
@@ -216,10 +217,9 @@ class App extends Component {
         });
         this.setState({venues:newVenues, markers: newMarkers});
       })
-      // Console log if there is an error accessing the venues
-      // The user also will see an error in the sidebar. See RestaurantList.js
+      // The user will see an error in the sidebar. See RestaurantList.js
       .catch(error => {
-        console.log("Oops. Failed to access a restaurant. " + error);
+        this.setState({apiError: true});
       })
     } // end of for loop
 
