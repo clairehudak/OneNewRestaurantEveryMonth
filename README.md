@@ -25,7 +25,9 @@ I used the following resources, references, and documentation to assist me in my
 
 * [Geocode Tool](https://google-developers.appspot.com/maps/documentation/utils/geocoder/#place_id%3DChIJQVEMm_WdToYR0CmVaBzG4Ug)
 
-* [React Fragments](https://reactjs.org/docs/fragments.html)
+* [React Fragments](https://reactjs.org/docs/fragments.html) / [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
+
+* [Labels](https://www.w3.org/WAI/tutorials/forms/labels/) / [Error handling](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
 
 * [Alerts](https://www.w3schools.com/js/tryit.asp?filename=tryjs_alert2) / [infoWindows](https://developers.google.com/maps/documentation/javascript/infowindows#close) / [Object.assing()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 
